@@ -15,9 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from .views import chat
+#from .views import chat
+#from .views import index
+from .views import callinfo
+#from .views import get_message_from_request
+
 
 urlpatterns = [
-	url(r'^chat/$', chat, name='chat'),
-    url(r'^admin/', admin.site.urls)
+	#url(r'^chat/$', chat, name='chat'),
+    url(r'^admin/', admin.site.urls),
+    #url(r'^index/$', index,name='index'),
+	url(r'^callinfo/$', callinfo,name='callinfo'),
+	#url(r'^getreq/$', get_message_from_request,name='get_message_from_request'),	
 ]

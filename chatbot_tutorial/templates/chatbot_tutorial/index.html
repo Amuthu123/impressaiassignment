@@ -8,22 +8,22 @@
         <meta http-equiv="content-type" content="text/html;charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel="shortcut icon" href="{% static 'chatbot_tutorial/favicon.ico' %}" type="image/x-icon">
-        <link rel="icon" href="{% static 'chatbot_tutorial/favicon.ico' %}" type="image/x-icon">
+       <!-- <link rel="shortcut icon" href="{% static 'chatbot_tutorial/favicon.ico' %}" type="image/x-icon"> 
+        <link rel="icon" href="{% static 'chatbot_tutorial/favicon.ico' %}" type="image/x-icon"> -->
 
         <link rel="stylesheet" href="{% static 'chatbot_tutorial/bootstrap/css/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'chatbot_tutorial/css/chat.css' %}">
+        <link rel="stylesheet" href="{% static 'chatbot_tutorial/css/chat.css' %}"> 
        
         <link href="{% static 'chatbot_tutorial/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <base target="_blank"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+        <base target="_blank"/> 
         <title>Websockets Bot</title>
-
+hellooooooooooooooooooooooooooooooooo
     </head>
     <body>
-        <!-- Wrap all page content here -->
 
-        <div id="wrap" class="BotMainDiv" ng-controller="ChatCtrl">
+
+     <div id="wrap" class="BotMainDiv" ng-controller="ChatCtrl">
             <!-- Begin page content -->
             <div class="container-fluid" id="body-container" style="border-bottom: #eee 1px solid;">
                
@@ -59,8 +59,8 @@
             </div>
 
         </div>
-        
-        <script type="text/javascript">
+ 
+       <script type="text/javascript">
             // Standard javascript code for csrf cookies
             function getCookie(name) {
                 var cookieValue = null;
@@ -127,8 +127,8 @@
             var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
 
             // Calls the websocket connect channel
-            var chatsock = new ReconnectingWebSocket(ws_scheme + '://' + window.location.host + "/chat/stream/test-chat");
-			
+            //var chatsock = new ReconnectingWebSocket(ws_scheme + '://' + window.location.host + "/chat/stream/test-chat");
+			var chatsock = new ReconnectingWebSocket(ws_scheme + '://' + window.location.host + "/chat/stream/test-chat");
 
 
             $("#messageToSend").keypress(function (e) {
@@ -171,7 +171,7 @@
             });
 
 
-        </script>
-
+        </script> 
+		
 </body>
 </html>

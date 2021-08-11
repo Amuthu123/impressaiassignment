@@ -24,10 +24,10 @@ SECRET_KEY = 'r^3o#=8lu#*y66k7!a_4^82a#0n)kau%5!y2)!oxs40@tn@22-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', '0.0.0.0','http://cbd1d07cf149.ngrok.io']
 
 
-# Application definition
+# Application definition4
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -79,11 +79,23 @@ WSGI_APPLICATION = 'chatbot_tutorial.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+#DATABASES = {
+ #   'default': {
+ #       'ENGINE': 'django.db.backends.sqlite3',
+ #       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+ #   }
+#}
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
+       'NAME': 'postgres',
+       'USER': 'postgres',
+       'PASSWORD': 'Amuthu1#',
+       'HOST': 'localhost',
+       'PORT': '5432',
+   }
 }
 
 
@@ -126,9 +138,12 @@ STATIC_URL = '/static/'
 SITE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = os.path.join(SITE_ROOT, "bot_static")
 
+
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "asgiref.inmemory.ChannelLayer",
         "ROUTING": "chatbot_tutorial.routing.channel_routing",
     },
 }
+
+

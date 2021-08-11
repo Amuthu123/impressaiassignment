@@ -1,0 +1,16 @@
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <title>Call Information</title>
+    </head>
+    <body>
+	Information is below :
+<br>
+<br>	
+	<table border ="1">
+	<tr><td> user_id </td><td> Button_name </td><td> No_Calls </td></tr>
+	{{ info_disp|safe }}
+</table>
+    </body>
+</html>
